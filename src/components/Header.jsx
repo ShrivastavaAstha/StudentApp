@@ -19,11 +19,11 @@ const Header = ({
               <Menu size={24} />
             </button>
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                 <User size={22} />
-              </div>
+              </div> */}
               <div>
-                <h1 className="text-xl font-bold">Public School</h1>
+                <h1 className="text-lg font-bold">Public School</h1>
                 <p className="text-sm text-blue-100">Student Portal</p>
               </div>
             </div>
@@ -42,7 +42,7 @@ const Header = ({
               onClick={onNotificationClick}
               className="p-2 rounded-md hover:bg-white/10 transition-colors relative"
             >
-              <Bell size={20} />
+              <Bell size={18} />
               <span className="absolute -top-1 -right-1 bg-red-500 text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 3
               </span>
