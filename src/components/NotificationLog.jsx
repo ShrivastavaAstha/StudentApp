@@ -116,7 +116,7 @@ const NotificationLog = () => {
               onClick={() => setFilter(type)}
               className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${
                 filter === type
-                  ? "bg-blue-600 text-white"
+                  ? "bg-indigo-600 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >

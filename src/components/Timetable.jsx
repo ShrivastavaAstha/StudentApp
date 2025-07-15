@@ -16,14 +16,14 @@ const Timetable = () => {
         subject: "Mathematics",
         teacher: "Dr. Smith",
         room: "Room 101",
-        color: "bg-red-500",
+        color: "bg-indigo-600",
       },
       {
         time: "10:15 AM - 11:15 AM",
         subject: "English",
         teacher: "Ms. Johnson",
         room: "Room 102",
-        color: "bg-blue-500",
+        color: "bg-indigo-600",
       },
       { time: "11:30 AM - 12:00 PM", subject: "Break", color: "bg-gray-400" },
       {
@@ -31,19 +31,19 @@ const Timetable = () => {
         subject: "Physics",
         teacher: "Mr. Brown",
         room: "Lab 1",
-        color: "bg-green-500",
+        color: "bg-indigo-600",
       },
       {
         time: "1:00 PM - 2:00 PM",
         subject: "Lunch Break",
-        color: "bg-yellow-400",
+        color: "bg-indigo-600",
       },
       {
         time: "2:00 PM - 3:00 PM",
         subject: "History",
         teacher: "Ms. Lee",
         room: "Room 104",
-        color: "bg-purple-500",
+        color: "bg-indigo-600",
       },
     ],
     Tuesday: [
@@ -52,14 +52,14 @@ const Timetable = () => {
         subject: "Chemistry",
         teacher: "Dr. Kim",
         room: "Lab 2",
-        color: "bg-pink-500",
+        color: "bg-indigo-600",
       },
       {
         time: "10:15 AM - 11:15 AM",
         subject: "Mathematics",
         teacher: "Dr. Smith",
         room: "Room 101",
-        color: "bg-red-500",
+        color: "bg-indigo-600",
       },
       { time: "11:30 AM - 12:00 PM", subject: "Break", color: "bg-gray-400" },
       {
@@ -67,19 +67,19 @@ const Timetable = () => {
         subject: "English",
         teacher: "Ms. Johnson",
         room: "Room 102",
-        color: "bg-blue-500",
+        color: "bg-indigo-600",
       },
       {
         time: "1:00 PM - 2:00 PM",
         subject: "Lunch Break",
-        color: "bg-yellow-400",
+        color: "bg-indigo-600",
       },
       {
         time: "2:00 PM - 3:00 PM",
         subject: "Computer Science",
         teacher: "Mr. Patel",
         room: "Lab 3",
-        color: "bg-cyan-500",
+        color: "bg-indigo-600",
       },
     ],
     Wednesday: [],
@@ -94,7 +94,7 @@ const Timetable = () => {
         <h2 className="text-2xl font-bold text-gray-800">Class Timetable</h2>
         <div className="text-sm text-gray-600">
           Today:{" "}
-          <span className="font-semibold text-blue-600">{currentDay}</span>
+          <span className="font-semibold text-indigo-600">{currentDay}</span>
         </div>
       </div>
 
@@ -170,7 +170,7 @@ const Timetable = () => {
 
                 {/* View Button */}
                 {slot.subject !== "Break" && slot.subject !== "Lunch Break" && (
-                  <button className="text-blue-600 hover:text-blue-800 text-sm font-medium w-fit mt-2 sm:mt-0">
+                  <button className="text-indigo-600 hover:text-blue-800 text-sm font-medium w-fit mt-2 sm:mt-0">
                     View Details
                   </button>
                 )}
@@ -196,7 +196,7 @@ const Timetable = () => {
             })}{" "}
             on {currentDay}.
           </p>
-          <p className="text-sm text-blue-600 mt-1">
+          <p className="text-sm text-indigo-600 mt-1">
             Check your schedule above to see what class you should be in right
             now.
           </p>

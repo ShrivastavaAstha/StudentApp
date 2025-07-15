@@ -8,7 +8,7 @@ const Header = ({
   onProfileClick,
 }) => {
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+    <header className="bg-indigo-600  text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -29,14 +29,14 @@ const Header = ({
             </div>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <button
+          <div className="flex items-center space-x-2">
+            {/* <button
               id="install-button"
               className="hidden p-2 rounded-md hover:bg-white/10 transition-colors"
               title="Install App"
             >
               <Download size={20} />
-            </button>
+            </button> */}
 
             <button
               onClick={onNotificationClick}

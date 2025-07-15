@@ -93,7 +93,7 @@ const Downloads = () => {
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition ${
               selectedCategory === category
-                ? "bg-blue-600 text-white"
+                ? "bg-indigo-600 text-white"
                 : "bg-gray-100 text-gray-800 hover:bg-gray-200"
             }`}
           >
@@ -142,7 +142,7 @@ const Downloads = () => {
               <div className="mt-4 sm:mt-0 sm:self-end w-full sm:w-auto">
                 <button
                   onClick={() => handleDownload(file)}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition"
                 >
                   <Download size={16} />
                   Download

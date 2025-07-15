@@ -93,9 +93,9 @@ const Settings = ({ student }) => {
               </div>
             </div>
 
-            <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+            {/* <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
               Edit Profile
-            </button>
+            </button> */}
           </div>
         </div>
 

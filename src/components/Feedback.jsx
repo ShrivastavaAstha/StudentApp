@@ -193,7 +193,7 @@ const Feedback = () => {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium w-full sm:w-auto"
           >
             <Send size={16} />
             <span>Submit Feedback</span>

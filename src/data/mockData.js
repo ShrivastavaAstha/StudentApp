@@ -22,7 +22,7 @@ export const mockCourses = [
     "MATH401",
     "Dr. Sarah Wilson",
     4,
-    "bg-blue-500",
+    "bg-indigo-600",
     "Mon, Wed, Fri 10:00-11:30",
     "Room 201"
   ),
@@ -32,7 +32,7 @@ export const mockCourses = [
     "PHYS301",
     "Prof. Michael Chen",
     3,
-    "bg-purple-500",
+    "bg-indigo-600",
     "Tue, Thu 14:00-15:30",
     "Lab 105"
   ),
@@ -42,7 +42,7 @@ export const mockCourses = [
     "ENG201",
     "Ms. Emma Davis",
     3,
-    "bg-green-500",
+    "bg-indigo-600",
     "Mon, Wed 13:00-14:30",
     "Room 304"
   ),
@@ -52,7 +52,7 @@ export const mockCourses = [
     "CS101",
     "Dr. James Rodriguez",
     4,
-    "bg-orange-500",
+    "bg-indigo-600",
     "Tue, Thu 10:00-11:30",
     "Computer Lab"
   ),
@@ -62,7 +62,7 @@ export const mockCourses = [
     "HIST201",
     "Prof. Linda Martinez",
     3,
-    "bg-red-500",
+    "bg-indigo-600",
     "Mon, Wed, Fri 09:00-10:00",
     "Room 105"
   ),
@@ -72,7 +72,7 @@ export const mockCourses = [
     "CHEM301",
     "Dr. Robert Taylor",
     4,
-    "bg-teal-500",
+    "bg-indigo-600",
     "Tue, Thu 15:00-16:30",
     "Lab 201"
   ),

@@ -38,7 +38,7 @@ const BottomNav = ({ activeTab, onTabChange }) => {
                 onClick={() => onTabChange(item.id)}
                 className={`flex flex-col items-center justify-center flex-1 min-w-[64px] py-2 px-1 transition-colors ${
                   isActive
-                    ? "text-blue-600 bg-blue-50"
+                    ? "text-indigo-600 bg-blue-50"
                     : "text-gray-600 hover:text-gray-800"
                 }`}
               >

@@ -98,7 +98,7 @@ const ActivityLog = () => {
             onClick={() => setFilter(f.value)}
             className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-colors ${
               filter === f.value
-                ? "bg-blue-600 text-white"
+                ? "bg-indigo-600 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
           >

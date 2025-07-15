@@ -1,19 +1,44 @@
-import React from 'react';
-import { Calendar, Clock, Award, TrendingUp, Book, FileText, Bell } from 'lucide-react';
+import React from "react";
+import {
+  Calendar,
+  Clock,
+  Award,
+  TrendingUp,
+  Book,
+  FileText,
+  Bell,
+} from "lucide-react";
 
-const Dashboard = ({ student, courses, assignments, grades, announcements }) => {
-  const upcomingAssignments = assignments.filter(a => a.status === 'pending').slice(0, 3);
+const Dashboard = ({
+  student,
+  courses,
+  assignments,
+  grades,
+  announcements,
+}) => {
+  const upcomingAssignments = assignments
+    .filter((a) => a.status === "pending")
+    .slice(0, 3);
   const recentGrades = grades.slice(0, 3);
-  const urgentAnnouncements = announcements.filter(a => a.priority === 'high').slice(0, 2);
-  
-  const averageGrade = Math.round(grades.reduce((sum, grade) => sum + (grade.score / grade.maxScore) * 100, 0) / grades.length);
+  const urgentAnnouncements = announcements
+    .filter((a) => a.priority === "high")
+    .slice(0, 2);
+
+  const averageGrade = Math.round(
+    grades.reduce(
+      (sum, grade) => sum + (grade.score / grade.maxScore) * 100,
+      0
+    ) / grades.length
+  );
 
   return (
     <div className="space-y-6">
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg">
+      <div className="bg-indigo-600 text-white p-6 rounded-lg">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-bold mb-2">Welcome back, {student.name}!</h2>
+            <h2 className="text-2xl font-bold mb-2">
+              Welcome back, {student.name}!
+            </h2>
             <p className="text-blue-100">
               {student.studentId} • {student.grade}
             </p>
@@ -30,7 +55,9 @@ const Dashboard = ({ student, courses, assignments, grades, announcements }) => 
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Courses</p>
-              <p className="text-2xl font-bold text-gray-800">{courses.length}</p>
+              <p className="text-2xl font-bold text-gray-800">
+                {courses.length}
+              </p>
             </div>
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
               <Book className="text-blue-600" size={24} />
@@ -42,7 +69,9 @@ const Dashboard = ({ student, courses, assignments, grades, announcements }) => 
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Pending Assignments</p>
-              <p className="text-2xl font-bold text-gray-800">{upcomingAssignments.length}</p>
+              <p className="text-2xl font-bold text-gray-800">
+                {upcomingAssignments.length}
+              </p>
             </div>
             <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
               <FileText className="text-orange-600" size={24} />
@@ -54,7 +83,9 @@ const Dashboard = ({ student, courses, assignments, grades, announcements }) => 
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Average Grade</p>
-              <p className="text-2xl font-bold text-gray-800">{averageGrade}%</p>
+              <p className="text-2xl font-bold text-gray-800">
+                {averageGrade}%
+              </p>
             </div>
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
               <TrendingUp className="text-green-600" size={24} />
@@ -83,13 +114,20 @@ const Dashboard = ({ student, courses, assignments, grades, announcements }) => 
           </h3>
           <div className="space-y-3">
             {upcomingAssignments.map((assignment) => (
-              <div key={assignment.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <div
+                key={assignment.id}
+                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              >
                 <div>
-                  <h4 className="font-medium text-gray-800">{assignment.title}</h4>
+                  <h4 className="font-medium text-gray-800">
+                    {assignment.title}
+                  </h4>
                   <p className="text-sm text-gray-600">{assignment.subject}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-medium text-orange-600">{assignment.dueDate}</p>
+                  <p className="text-sm font-medium text-orange-600">
+                    {assignment.dueDate}
+                  </p>
                   <p className="text-xs text-gray-500">Due Date</p>
                 </div>
               </div>
@@ -104,14 +142,23 @@ const Dashboard = ({ student, courses, assignments, grades, announcements }) => 
           </h3>
           <div className="space-y-3">
             {recentGrades.map((grade) => (
-              <div key={grade.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <div
+                key={grade.id}
+                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              >
                 <div>
-                  <h4 className="font-medium text-gray-800">{grade.assignment}</h4>
+                  <h4 className="font-medium text-gray-800">
+                    {grade.assignment}
+                  </h4>
                   <p className="text-sm text-gray-600">{grade.subject}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-green-600">{grade.score}/{grade.maxScore}</p>
-                  <p className="text-xs text-gray-500">{Math.round((grade.score / grade.maxScore) * 100)}%</p>
+                  <p className="text-lg font-bold text-green-600">
+                    {grade.score}/{grade.maxScore}
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    {Math.round((grade.score / grade.maxScore) * 100)}%
+                  </p>
                 </div>
               </div>
             ))}
@@ -127,9 +174,16 @@ const Dashboard = ({ student, courses, assignments, grades, announcements }) => 
           </h3>
           <div className="space-y-3">
             {urgentAnnouncements.map((announcement) => (
-              <div key={announcement.id} className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                <h4 className="font-medium text-red-800">{announcement.title}</h4>
-                <p className="text-sm text-red-700 mt-1">{announcement.message}</p>
+              <div
+                key={announcement.id}
+                className="p-4 bg-red-50 border border-red-200 rounded-lg"
+              >
+                <h4 className="font-medium text-red-800">
+                  {announcement.title}
+                </h4>
+                <p className="text-sm text-red-700 mt-1">
+                  {announcement.message}
+                </p>
                 <p className="text-xs text-red-600 mt-2">
                   {announcement.author} • {announcement.date}
                 </p>

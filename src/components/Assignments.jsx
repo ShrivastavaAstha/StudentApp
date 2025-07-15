@@ -114,7 +114,7 @@ const Assignments = ({ assignments }) => {
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-2">
                   {assignment.status === "pending" && (
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                       Submit Assignment
                     </button>
                   )}

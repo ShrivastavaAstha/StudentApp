@@ -1,5 +1,12 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Plus, Calendar as CalendarIcon, Clock, MapPin } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Plus,
+  Calendar as CalendarIcon,
+  Clock,
+  MapPin,
+} from "lucide-react";
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -9,57 +16,67 @@ const Calendar = () => {
   const events = [
     {
       id: 1,
-      title: 'Mathematics Test',
-      date: '2024-07-22',
-      time: '10:00 AM',
-      type: 'exam',
-      location: 'Room 201',
-      color: 'bg-red-500'
+      title: "Mathematics Test",
+      date: "2024-07-22",
+      time: "10:00 AM",
+      type: "exam",
+      location: "Room 201",
+      color: "bg-red-500",
     },
     {
       id: 2,
-      title: 'Physics Assignment Due',
-      date: '2024-07-25',
-      time: '11:59 PM',
-      type: 'assignment',
-      location: 'Online',
-      color: 'bg-orange-500'
+      title: "Physics Assignment Due",
+      date: "2024-07-25",
+      time: "11:59 PM",
+      type: "assignment",
+      location: "Online",
+      color: "bg-orange-500",
     },
     {
       id: 3,
-      title: 'Science Fair',
-      date: '2024-07-28',
-      time: '9:00 AM',
-      type: 'event',
-      location: 'Main Hall',
-      color: 'bg-blue-500'
+      title: "Science Fair",
+      date: "2024-07-28",
+      time: "9:00 AM",
+      type: "event",
+      location: "Main Hall",
+      color: "bg-blue-500",
     },
     {
       id: 4,
-      title: 'Chemistry Lab',
-      date: '2024-07-23',
-      time: '2:00 PM',
-      type: 'class',
-      location: 'Lab 201',
-      color: 'bg-green-500'
+      title: "Chemistry Lab",
+      date: "2024-07-23",
+      time: "2:00 PM",
+      type: "class",
+      location: "Lab 201",
+      color: "bg-green-500",
     },
     {
       id: 5,
-      title: 'Parent-Teacher Meeting',
-      date: '2024-07-30',
-      time: '3:00 PM',
-      type: 'meeting',
-      location: 'Conference Room',
-      color: 'bg-purple-500'
-    }
+      title: "Parent-Teacher Meeting",
+      date: "2024-07-30",
+      time: "3:00 PM",
+      type: "meeting",
+      location: "Conference Room",
+      color: "bg-purple-500",
+    },
   ];
 
   const months = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
-  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   const getDaysInMonth = (date) => {
     const year = date.getFullYear();
@@ -70,24 +87,24 @@ const Calendar = () => {
     const startingDayOfWeek = firstDay.getDay();
 
     const days = [];
-    
+
     // Add empty cells for days before the first day of the month
     for (let i = 0; i < startingDayOfWeek; i++) {
       days.push(null);
     }
-    
+
     // Add days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       days.push(new Date(year, month, day));
     }
-    
+
     return days;
   };
 
   const getEventsForDate = (date) => {
     if (!date) return [];
-    const dateString = date.toISOString().split('T')[0];
-    return events.filter(event => event.date === dateString);
+    const dateString = date.toISOString().split("T")[0];
+    return events.filter((event) => event.date === dateString);
   };
 
   const isToday = (date) => {
@@ -119,7 +136,7 @@ const Calendar = () => {
         <h2 className="text-2xl font-bold text-gray-800">Calendar</h2>
         <button
           onClick={handleAddEvent}
-          className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center space-x-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
         >
           <Plus size={16} />
           <span>Add Event</span>
@@ -135,11 +152,11 @@ const Calendar = () => {
           >
             <ChevronLeft size={20} />
           </button>
-          
+
           <h3 className="text-lg font-semibold text-gray-800">
             {months[currentDate.getMonth()]} {currentDate.getFullYear()}
           </h3>
-          
+
           <button
             onClick={() => navigateMonth(1)}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
@@ -151,7 +168,10 @@ const Calendar = () => {
         {/* Days of Week Header */}
         <div className="grid grid-cols-7 border-b border-gray-200">
           {daysOfWeek.map((day) => (
-            <div key={day} className="p-3 text-center text-sm font-medium text-gray-600 bg-gray-50">
+            <div
+              key={day}
+              className="p-3 text-center text-sm font-medium text-gray-600 bg-gray-50"
+            >
               {day}
             </div>
           ))}
@@ -165,20 +185,22 @@ const Calendar = () => {
               <div
                 key={index}
                 className={`min-h-[100px] p-2 border-r border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors ${
-                  isSelected(date) ? 'bg-blue-50' : ''
+                  isSelected(date) ? "bg-blue-50" : ""
                 }`}
                 onClick={() => date && setSelectedDate(date)}
               >
                 {date && (
                   <>
-                    <div className={`text-sm font-medium mb-1 ${
-                      isToday(date) 
-                        ? 'bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center' 
-                        : 'text-gray-800'
-                    }`}>
+                    <div
+                      className={`text-sm font-medium mb-1 ${
+                        isToday(date)
+                          ? "bg-indigo-600 text-white w-6 h-6 rounded-full flex items-center justify-center"
+                          : "text-gray-800"
+                      }`}
+                    >
                       {date.getDate()}
                     </div>
-                    
+
                     <div className="space-y-1">
                       {dayEvents.slice(0, 2).map((event) => (
                         <div
@@ -211,14 +233,19 @@ const Calendar = () => {
             Events for {selectedDate.toLocaleDateString()}
           </h3>
         </div>
-        
+
         <div className="p-4">
           {getEventsForDate(selectedDate).length === 0 ? (
-            <p className="text-gray-500 text-center py-4">No events scheduled for this date</p>
+            <p className="text-gray-500 text-center py-4">
+              No events scheduled for this date
+            </p>
           ) : (
             <div className="space-y-3">
               {getEventsForDate(selectedDate).map((event) => (
-                <div key={event.id} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                <div
+                  key={event.id}
+                  className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg"
+                >
                   <div className={`w-4 h-4 rounded-full ${event.color}`}></div>
                   <div className="flex-1">
                     <h4 className="font-medium text-gray-800">{event.title}</h4>
@@ -281,7 +308,7 @@ const Calendar = () => {
               <button
                 onClick={() => {
                   setShowAddEvent(false);
-                  alert('Event added successfully! (Demo)');
+                  alert("Event added successfully! (Demo)");
                 }}
                 className="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >

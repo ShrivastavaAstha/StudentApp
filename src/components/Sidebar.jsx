@@ -68,7 +68,7 @@ const Sidebar = ({ isOpen, onClose, activeTab, onTabChange }) => {
                 }}
                 className={`w-full flex items-center space-x-3 px-6 py-3 text-left hover:bg-gray-50 transition-colors ${
                   activeTab === id
-                    ? "bg-blue-50 text-blue-600 border-r-4 border-blue-600"
+                    ? "bg-blue-50 text-indigo-600 border-r-4 border-indigo-600"
                     : "text-gray-600"
                 }`}
               >
