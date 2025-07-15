@@ -109,7 +109,9 @@ const Teachers = () => {
                   <h3 className="text-lg font-semibold text-gray-800">
                     {teacher.name}
                   </h3>
-                  <p className="bg-indigo-600 font-medium">{teacher.subject}</p>
+                  <p className="text-indigo-600 font-medium">
+                    {teacher.subject}
+                  </p>
                   <p className="text-sm text-gray-500">
                     {teacher.experience} experience
                   </p>
