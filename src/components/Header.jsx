@@ -35,6 +35,7 @@ const Header = ({
               className="hidden p-2 rounded-md hover:bg-white/10 transition-colors"
               title="Install App"
             >
+            
               <Download size={20} />
             </button> */}
 
