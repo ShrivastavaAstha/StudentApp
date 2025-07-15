@@ -23,6 +23,6 @@ export const triggerPWAInstall = async () => {
     }
     deferredPrompt = null;
   } else {
-    alert("Install prompt not available. Please open in a supported browser.");
+    alert("It looks like you have already installed the app.");
   }
 };
