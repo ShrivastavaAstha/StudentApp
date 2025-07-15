@@ -35,7 +35,7 @@ const Header = ({
               className="hidden p-2 rounded-md hover:bg-white/10 transition-colors"
               title="Install App"
             >
-            
+
               <Download size={20} />
             </button> */}
 
@@ -44,7 +44,7 @@ const Header = ({
               className="p-2 rounded-md hover:bg-white/10 transition-colors relative"
             >
               <Bell size={18} />
-              <span className="absolute -top-1 -right-1 bg-red-500 text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-red-500 text-xs rounded-full h-4 w-4 flex items-center justify-center">
                 3
               </span>
             </button>
