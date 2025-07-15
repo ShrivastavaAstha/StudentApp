@@ -9,7 +9,7 @@ const Header = ({
 }) => {
   return (
     <header className="bg-indigo-600  text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <button
@@ -43,8 +43,8 @@ const Header = ({
               onClick={onNotificationClick}
               className="p-2 rounded-md hover:bg-white/10 transition-colors relative"
             >
-              <Bell size={18} />
-              <span className="absolute -top-1 -right-1 bg-red-500 text-xs rounded-full h-4 w-4 flex items-center justify-center">
+              <Bell size={22} />
+              <span className="absolute -top-1 -right-1 bg-red-500 text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 3
               </span>
             </button>
